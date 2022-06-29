@@ -1,0 +1,11 @@
+.paragraph {
+  background-color: powderblue;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+#subtitle {
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif Arial,
+    Helvetica, sans-serif;
+}
