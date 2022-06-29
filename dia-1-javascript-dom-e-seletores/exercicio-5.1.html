@@ -44,13 +44,23 @@
     </main>
     <script>
       document.getElementsByTagName("p")[1].innerText =
-        "Me vejo trabalhando, estudando e com meus dogs. Minha mãe com a brigaderia dando certo e crescendo financeiramente!";
-        document.getElementsByClassName('main-content')[0].style.backgroundColor = "rgb(76,164,109)"
-        document.getElementsByTagName('section')[0].style.backgroundColor = 'white'
-        document.getElementsByClassName('title')[0].innerText = "Exercício 5.1 - Javascript"    
-        document.getElementById('trybe-id').innerText = "TRYBE"
-        console.log(document.getElementsByTagName('p'))
-        /*
+        "Me vejo trabalhando, estudando e com meus dogs.";
+      document.getElementsByClassName("main-content")[0].style.backgroundColor =
+        "rgb(76,164,109)";
+      document.getElementsByTagName("section")[0].style.backgroundColor =
+        "white";
+      document.getElementsByClassName("title")[0].innerText =
+        "Exercício 5.1 - Javascript";
+      // document.getElementById('trybe-id').innerText = 'TRYBE' <-- erro de interpretação e execução
+      document.getElementsByTagName("p")[0].innerText.toUpperCase;
+      console.log(document.getElementsByTagName("p"));
+
+      const arrayDeParagrafo = document.getElementsByTagName("p");
+      for (let indice = 0; indice < arrayDeParagrafo.length; indice += 1) {
+        arrayDeParagrafo[indice].innerText =
+          arrayDeParagrafo[indice].innerText.toUpperCase();
+      }
+      /*
         Aqui você vai modificar os elementos já existentes utilizando 
         apenas as funções:
         - document.getElementById()
