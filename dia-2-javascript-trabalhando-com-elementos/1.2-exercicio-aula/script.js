@@ -17,29 +17,43 @@
     Agora acesse o terceiroFilho a partir de pai.
 */
 
-console.log(document.getElementById('elementoOndeVoceEsta'));
+const elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
 
 //dúvida - questão: Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
-let whoIsYourFather = document.getElementById('elementoOndeVoceEsta').parentNode
-whoIsYourFather.style.color = 'red'
-console.log(whoIsYourFather)
+const papai = elementoOndeVoceEsta.parentElement
+papai.style.color = 'red'
 
-let firstChild = document.getElementById('elementoOndeVoceEsta').firstElementChild
-console.log(firstChild)
-firstChild.innerText = 'Esse é um innerText do primeiro filho do Filho'
+const primeiroFilhoDoFilho = elementoOndeVoceEsta.firstElementChild
+primeiroFilhoDoFilho.innerText = 'primeiroFilhoDoFilho'
 
-let myFirstChild = document.getElementById('pai').firstElementChild
-console.log(myFirstChild)
+const primeiroFilho = pai.firstElementChild
 
-let myFirstBrother = document.getElementById('elementoOndeVoceEsta').previousElementSibling
-console.log(myFirstBrother)
+const primeiroIrmao = elementoOndeVoceEsta.previousElementSibling
 
-//duvida - questão: Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
-let twoPreviousElements = document.getElementById('elementoOndeVoceEsta').parentElement.innerText
-console.log(twoPreviousElements)
+const atencao = elementoOndeVoceEsta.nextSibling
 
-let myThirdBrother = document.getElementById('elementoOndeVoceEsta').nextElementSibling
-console.log(myThirdBrother)
+const terceiroIrmao = elementoOndeVoceEsta.nextElementSibling
 
-let myLastSon = document.getElementById('pai').lastElementChild
-console.log(myLastSon)
+const terceiroFilho = pai.lastElementChild.previousElementSibling
+
+const quintoFilho = document.createElement('section')
+papai.appendChild(quintoFilho)
+
+const terceiroFilhoDoFilho = document.createElement('section')
+elementoOndeVoceEsta.appendChild(terceiroFilhoDoFilho)
+
+const filhoDoPrimeiroFilhoDoFilho = document.createElement('section')
+primeiroFilhoDoFilho.appendChild(filhoDoPrimeiroFilhoDoFilho)
+filhoDoPrimeiroFilhoDoFilho.innerText = 'filho do primeiro filho do filho'
+
+const pai = document.getElementById('pai');
+
+    for (let index = pai.childNodes.length - 1; index >= 0; index -= 1) {
+      const currentChildren = pai.childNodes[index];
+      if (currentChildren.id !== 'elementoOndeVoceEsta') {
+        currentChildren.remove();
+      }
+    }
+
+    const segundoEUltimoFilhoDoFilho = document.getElementById('segundoEUltimoFilhoDoFilho');
+    segundoEUltimoFilhoDoFilho.remove();

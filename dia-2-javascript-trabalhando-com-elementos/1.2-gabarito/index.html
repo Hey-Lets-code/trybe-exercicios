@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="#" />
+  <title>Document</title>
+</head>
+<body>
+  <main id="paiDoPai"> pai do pai
+    <section id="pai"> pai
+      <section id="primeiroFilho">primeiro filho</section>
+      <section id="elementoOndeVoceEsta"> elemento onde voce esta 
+        <section id="primeiroFilhoDoFilho">primeiro filho do elemento onde voce esta</section>
+        <section id="segundoEUltimoFilhoDoFilho">segundo filho do elemento onde voce esta</section>
+      </section>
+      Atenção!
+      <section id="terceiroFilho">terceiro filho</section>
+      <section id="quartoEUltimoFilho">quarto filho</section>
+    </section>
+  </main>
+
+  <script>
+    // 1. Acesse o elemento elementoOndeVoceEsta.
+    const elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
+
+    // 2. Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+    const pai = elementoOndeVoceEsta.parentElement;
+    pai.style.color = 'red';
+
+    // 3. Acesse o primeiroFilhoDoFilho e adicione um texto a ele.
+    // Você se lembra dos vídeos da aula anterior, como fazer isso?
+    const primeiroFilhoDoFilho = elementoOndeVoceEsta.firstElementChild
+    primeiroFilhoDoFilho.innerText = 'primeiroFilhoDoFilho'
+
+    // 4. Acesse o primeiroFilho a partir de pai.
+    const primeiroFilho = pai.firstElementChild;
+
+    // 5. Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
+    const primeirofilho = elementoOndeVoceEsta.previousElementSibling;
+    
+    // 6. Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
+    const textElement = elementoOndeVoceEsta.nextSibling;
+
+    // 7. Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
+    const terceiroFilho = elementoOndeVoceEsta.nextElementSibling;
+
+    // 8. Agora acesse o terceiroFilho a partir de pai.
+    const terceiroFilho2 = pai.lastElementChild.previousElementSibling;
+  </script>
+</body>
+</html>
