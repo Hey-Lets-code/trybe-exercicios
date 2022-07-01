@@ -98,11 +98,13 @@
       const elementoUl = document.createElement('ul');
       document.elementoSecaoTres.appendChild(elementoUl);
       const arrayNumeros = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+    
       for(let indice = 0; indice < arrayNumeros.length; indice += 1){
         const elementoLi = document.createElement('li')
         elementoLi.innerHTML = arrayNumeros[indice]
         elementoUl.appendChild(elementoLi)
       }
+    
 
       //9
       for(let index = 1; index <= 3; index += 1){
@@ -111,7 +113,13 @@
         elementMain.appendChild(elementoH3)
       }
 
+      //Segunda parte
 
+      //1
+      elementoH1.classList.add('title')
+
+      //2
+      
     </script>
   </body>
 </html>
