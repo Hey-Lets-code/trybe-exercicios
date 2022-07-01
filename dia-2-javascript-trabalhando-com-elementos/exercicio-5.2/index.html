@@ -59,67 +59,118 @@
   <body>
     <script>
       //1
-      const elementoH1 = document.createElement('h1')
-      elementoH1.innerText = 'Exercício 5.2 - JavaScript DOM'
+      const elementoH1 = document.createElement("h1");
+      elementoH1.innerText = "Exercício 5.2 - JavaScript DOM";
       document.body.appendChild(elementoH1);
+      const getElementoH1 = document.getElementsByTagName("h1")[0];
 
       //2
-      const elementMain = document.createElement('main');
-      elementMain.className = 'main-content';
+      const elementMain = document.createElement("main");
+      elementMain.className = "main-content";
       document.body.appendChild(elementMain);
+      //preciso criar outra constante pra pegar o elementMain
+      //criar primeiro o elemento e depois criar uma constante pr acessar ele
+      const getElemenetMain = document.getElementsByTagName("main")[0];
+      getElemenetMain.innerHTML =
+        "Criei uma constante para pegar o elemento main e modificá-lo";
+      //se eu pegar a partir de elementMain ele não mudará o conteúdo
 
       //3
-      const elementoSecao = document.createElement('section');
-      elementoSecao.className = 'center-content';
-      elementMain.appendChild(elementoSecao)
+      const elementoSecao = document.createElement("section");
+      elementoSecao.className = "center-content";
+      elementMain.appendChild(elementoSecao);
 
       //4
-      const paragrafo = document.createElement('p');
-      paragrafo.innerHTML = 'Texto do paragrafo que é filho da Tag Section';
+      const paragrafo = document.createElement("p");
+      paragrafo.innerHTML = "Texto do paragrafo que é filho da Tag Section";
       elementoSecao.appendChild(paragrafo);
 
       //5
-      const elementoSecaoDois = document.createElement('section');
-      elementoSecaoDois.className = 'left-content';
+      const elementoSecaoDois = document.createElement("section");
+      elementoSecaoDois.className = "left-content";
       elementMain.appendChild(elementoSecaoDois);
 
       //6
-      const elementoSecaoTres = document.createElement('section');
-      elementoSecaoTres.className = 'right-content';
+      const elementoSecaoTres = document.createElement("section");
+      elementoSecaoTres.className = "right-content";
       elementMain.appendChild(elementoSecaoTres);
-
+      const section3 = document.getElementsByClassName("right-content")[0];
       //7
-      const imagemFilhoDaSectionDois = document.createElement('img');
-      imagemFilhoDaSectionDois.className = 'small-image';
-      imagemFilhoDaSectionDois.src = 'https://picsum.photos/200';
+      const imagemFilhoDaSectionDois = document.createElement("img");
+      imagemFilhoDaSectionDois.className = "small-image";
+      imagemFilhoDaSectionDois.src = "https://picsum.photos/200";
       elementoSecaoDois.appendChild(imagemFilhoDaSectionDois);
 
       //8
-      const elementoUl = document.createElement('ul');
-      document.elementoSecaoTres.appendChild(elementoUl);
-      const arrayNumeros = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
-    
-      for(let indice = 0; indice < arrayNumeros.length; indice += 1){
-        const elementoLi = document.createElement('li')
-        elementoLi.innerHTML = arrayNumeros[indice]
-        elementoUl.appendChild(elementoLi)
+      const elementoUl = document.createElement("ul");
+      elementoUl.className = "elemento-ul";
+      section3.appendChild(elementoUl);
+
+      const elementoUlSection3 =
+        document.getElementsByClassName("elemento-ul")[0];
+
+      const arrayNumeros = [
+        "Um",
+        "Dois",
+        "Três",
+        "Quatro",
+        "Cinco",
+        "Seis",
+        "Sete",
+        "Oito",
+        "Nove",
+        "Dez",
+      ];
+
+      for (let indice = 0; indice < arrayNumeros.length; indice += 1) {
+        const elementoLi = document.createElement("li");
+        elementoLi.innerHTML = arrayNumeros[indice];
+        elementoUlSection3.appendChild(elementoLi);
       }
-    
 
       //9
-      for(let index = 1; index <= 3; index += 1){
-        const elementoH3 = document.createElement('h3');
-        elementoH3.innerHTML = 'Show ' + index;
-        elementMain.appendChild(elementoH3)
+      for (let index = 1; index <= 3; index += 1) {
+        const elementoH3 = document.createElement("h3");
+        elementoH3.innerHTML = "Show " + index;
+        elementMain.appendChild(elementoH3);
       }
 
       //Segunda parte
 
       //1
-      elementoH1.classList.add('title')
+      getElementoH1.className = "title";
 
       //2
+      const elementsH3 = document.getElementsByTagName('h3')
       
+      for(let posicao = 0; posicao < 3 ; posicao += 1){
+        elementsH3[posicao].className = 'description'
+      }
+
+      //3
+      const leftContent = document.getElementsByClassName('left-content')[0]
+      elementMain.removeChild(leftContent)
+
+      //4
+      const rightContent = document.getElementsByClassName('right-content')[0]
+      rightContent.style.marginRight = 'auto'
+      rightContent.style.backgroundColor = 'pink'
+
+      //5
+      const centerContent = document.getElementsByClassName('center-content')[0]
+      centerContent.style.backgroundColor = 'purple' //o exercício pede para mudar para verde
+
+      //6
+      const elementoLi9 = elementoUl.lastElementChild 
+      const elementoLi10 = elementoUl.lastElementChild.previousElementSibling
+
+      elementoUl.removeChild(elementoLi9) //não precisava criar variavel nesse caso
+      elementoUl.removeChild(elementoLi10)
+      //testes
+      const getBody = document.getElementsByTagName('body')[0]
+      getBody.className = 'body-classe'
+      getBody.style.backgroundColor = 'white'
+      getElemenetMain.style.backgroundColor = 'orange'
     </script>
   </body>
 </html>
