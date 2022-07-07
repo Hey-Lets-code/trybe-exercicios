@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#header-form {
+    text-align: left;
+    padding: 30px;
+    font-size:larger;
+    font-family:Arial, Helvetica, sans-serif;
+    border-radius: 1px;
+    width: 50%;
+    margin: 10px;
+    color: grey;
+}
+
+#estilo-section {
+    background-color: rgb(246,247,248);
+    border: 5px solid rgb(4, 32, 59);
+    width: 80%;
+    margin:20px;
+    padding: 20px;;
+}
+
+#opcoes {
+    
+}
+
+#textarea {
+
+}
+
+#data-input {
+
+}
+
+#checkbox {
+
+}
+
+.botao {
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #5995da;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+#divBotao {
+    padding: 50px;
+    display:inline-block;
+}
