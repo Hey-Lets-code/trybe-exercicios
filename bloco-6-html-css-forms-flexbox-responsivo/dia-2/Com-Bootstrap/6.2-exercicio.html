@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TrybeTrip</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="6.2-exercicio.css" />
+  </head>
+  <body>
+    <form action="" method="post">
+      <header id="header-form" class="container">
+        <h1 id="heading1-form" class="">
+          Concorra à Viagem dos seus sonhos com a TrybeTrip
+        </h1>
+      </header>
+      <main class='container'>
+        <form action="" method="get" class="container">
+          <section id="estilo-section">
+            <div class="container">
+              <label for="nome-completo">Nome:</label>
+              <input
+                type="text"
+                id="nome-completo"
+                name="nome-completo"
+                placeholder="Digite seu nome completo"
+                maxlength="40"
+                minlength="10"
+                required
+              />
+            </div>
+            <div class="container">
+              <label for="email-usuario">E-mail:</label>
+              <input
+                type="email"
+                name="email-usuario"
+                id="email-usuario"
+                placeholder="Digite seu email"
+                maxlength="50"
+                minlength="10"
+              />
+            </div>
+            <div id="opcoes" class="container">
+              <fieldset>
+                <input type="radio" name="opcao" id="opcao-1" required />
+                <label for="opcao-1">Cidade</label>
+                <input type="radio" name="opcao" id="opcao-2" required />
+                <label for="opcao-2">Campo</label>
+                <input type="radio" name="opcao" id="opcao-3" required />
+                <label for="opcao-3">Praia</label>
+                <input type="radio" name="opcao" id="opcao-4" required />
+                <label for="opcao-4">Montanhas</label>
+              </fieldset>
+            </div>
+            <div id="textarea" class="container">
+              <label for="textarea"
+                >Por que você deveria ser a pessoa desenvolvedora a ganhar o
+                concurso TrybeTrip?</label
+              >
+              <textarea
+                name="textarea"
+                class="container"
+                id="textarea"
+                cols="30"
+                rows="10"
+                maxlength="500"
+                required
+              ></textarea>
+            </div>
+            <div id="data-input" class="container">
+              <label for="data-input"
+                >Qual a melhor data para realizar sua viagem?</label
+              >
+              <br />
+              <input
+                type="text"
+                id="data-input"
+                placeholder="dd/mm/aaaa"
+                required
+              />
+            </div>
+            <div id="checkbox" class="container">
+              <label for="concordo-checkbox">
+                <input
+                  type="checkbox"
+                  name="concordo-checkbox"
+                  id="concordo-checkbox"
+                />
+                <span
+                  >Gostaria de receber outras incríveis oportunidades oferecidas
+                  pela Trybe?
+                </span>
+              </label>
+              <label for="concordo-checkbox2">
+                <input
+                  type="checkbox"
+                  name="concordo-checkbox2"
+                  id="concordo-checkbox2"
+                />
+                <span>
+                  Concordo que imagens das minhas férias poderão ser usadas na
+                  divulgação de concursos futuros.
+                </span>
+              </label>
+            </div>
+          </section>
+          <div class='container'>
+            <button type="submit" class="btn btn-primary" id="enviar">
+              Participar do concurso TrybeTrip
+            </button>
+            <button type="submit" class="btn btn-primary" id="apagar">
+              Apagar informações
+            </button>
+          </div>
+        </form>
+      </main>
+    </form>
+    <script src="6.2-exercicio.js"></script>
+  </body>
+</html>
