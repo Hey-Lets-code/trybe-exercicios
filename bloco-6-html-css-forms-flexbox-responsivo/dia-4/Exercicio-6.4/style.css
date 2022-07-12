@@ -89,6 +89,11 @@
     flex-grow: 1; /* Porque o flex-grow foi usado aqui?*/
     /* Ele tem o atributo wrap, então quando ele aumentou ele
     quebra a linha*/
+    
+    /*
+    Ele dobra o tamanho, Letícia. Quando o valor é 2 -->
+    é porque ele é duas vezes maior de um elemento que possuí o valor sendo 1.
+    */
   }
   
   .aside-container h3, h4 {
