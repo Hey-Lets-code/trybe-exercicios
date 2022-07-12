@@ -27,6 +27,7 @@
     order:1;
     flex-grow: 1; /* Porque o flex-grow fez diferença aqui, pq ele fez o texto parecer que tinha o flex-around?*/
     /* align-items: center; Eu coloquei a centralização aqui, pq ele pede o align-self na ul? Ambos alinham na vertical?*/
+    /* O grow vai sempre tentar ocupar o valor definido do espaço disponível*/
   }
   
   .menu-container ul {
@@ -45,13 +46,14 @@
   }
   .main-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Quando não houver mais espaço ele quebra a linha*/
   }
   
   .movie-container {
     display: flex;
     flex-direction: column;
-    flex-basis: 700px; /* O que foi esse comportamento do flex-basis?*/
+    flex-basis: 700px; /* O que foi esse comportamento do flex-basis? 
+    Seria apenas o ponto de partida do tamanho inicial*/
     flex-grow: 10;
     align-self: stretch;
   }
@@ -75,7 +77,7 @@
     height: 150px;
     justify-content: center;
     margin: 10px;
-    flex-basis: 16%; /* O que foi esse comportamento do flex-basis?*/
+    flex-basis: 16%; /* O que foi esse comportamento do flex-basis?* 16% do elemento pai (do card-container)/ */
     flex-grow: 1; /* Não estou entendendo o flex-grow*/
   }
   
@@ -85,6 +87,8 @@
     margin: 20px;
     flex-basis: 350px; /* Pq quando eu aumento o tamanho ele vai p/ esquerda?*/
     flex-grow: 1; /* Porque o flex-grow foi usado aqui?*/
+    /* Ele tem o atributo wrap, então quando ele aumentou ele
+    quebra a linha*/
   }
   
   .aside-container h3, h4 {
