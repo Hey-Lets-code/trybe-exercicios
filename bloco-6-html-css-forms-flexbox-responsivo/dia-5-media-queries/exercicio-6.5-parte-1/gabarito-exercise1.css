@@ -1,0 +1,94 @@
+/*
+ * @see http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * apply a natural box layout model to all elements, but allowing components to change
+ */
+ html {
+    box-sizing: border-box;
+    /**/
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+    /**/
+  }
+  
+  body {
+    font: 1.2em/1.2 Helvetica, aria, sans-serif;
+    margin: 0 3%;
+    /**/
+  }
+  
+  article {
+    text-align: justify;
+    /**/
+  }
+  
+  h1 {
+    font-size: 1.8em;
+    margin: .9em 0 0 0;
+    /**/
+  }
+  
+  h2 {
+    font-size: 1.5em;
+    margin: 1.5em 0 0 0;
+    /**/
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    /* Main com as fotos dos gatos*/
+  }
+  
+  section {
+    display: flex;
+    flex-flow: row wrap;
+    /*Contém as figuras*/
+  }
+  
+  figure {
+    background: black;
+    border-radius: 5px;
+    color: white;
+    margin: 0 0 25px 0;
+    padding: 10px;
+    text-align: center;
+    /* Figura individual*/
+  }
+  
+  figcaption {
+    font-size: .8em;
+    /* Texto embaixo da figura */
+  }
+  /* Pq usar o screen? É obrigatório colocar?*/
+  /* min = a partir de*/
+  @media screen and (min-width: 794px) {
+    body {
+      background: rgba(0,0,255,.2);
+      margin: 25px 6%;
+      /* Por que dois valores?*/
+    }
+    /*Aqui coube 2 imagens uma ao lado da outra*/
+    figure {
+      width: 45%; /* Qual a diferença entre 45% e 100% no computador não percebi a diferença*/
+      margin-right: 4.5%; /* por que ele só ajustou a direita?*/
+    }
+  }
+  /*min = a partir de*/
+  @media screen and (min-width: 1020px) {
+    body {
+      background: rgba(0,255,0,.2);
+      margin: 25px 10%;
+      max-width: 1130px;
+    }
+   /*Aqui coube 3 imagens uma ao lado da outra*/
+    figure {
+      width: 30%;
+      margin-right: 2.5%;
+    }
+  }

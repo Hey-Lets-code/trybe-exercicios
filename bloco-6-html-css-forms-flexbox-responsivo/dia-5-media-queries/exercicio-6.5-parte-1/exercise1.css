@@ -7,12 +7,13 @@
   }
   
   *, *:before, *:after {
-    box-sizing: inherit;
+    box-sizing: inherit; /* O que siginifca box-sizing e inherit*/
   }
   
   body {
-    font-size: larger; /*1 - Faça o tamanho da fonte ser maior;*/
+    font-size: small; /*1 - Faça o tamanho da fonte ser maior;*/
     margin: 20px; /* Não foi especificado o valor, gostaria de compreender melhor como o margin funciona*/
+
   }
   
   article {
@@ -36,7 +37,9 @@
   }
   
   section {
-  
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
   }
   
   figure {
@@ -45,6 +48,8 @@
   
   figcaption {
     font-size: .8em; /* Não entendi o 'em'*/ 
+    display: flex;
+    flex-flow: row wrap;
   }
 /*  
 Guarde a largura da tela no ponto que você identificou que o layout atual não funcionou bem (por exemplo 800px). 
@@ -84,4 +89,91 @@ para encontrar um novo breakpoint.*/
     Ajuste o tamanho da fonte;
     Ajuste as margens da página;
     Adicione a propriedade max-width à página, para garantir que a largura das linhas não fique muito grande.
+*/
+
+/*
+1)
+body {
+  font: 1.2em/1.2 Helvetica, aria, sans-serif;
+}
+
+2)
+
+h1 {
+  font-size: 1.8em;
+  margin: .9em 0 0 0;
+}
+
+3) 
+
+
+img {
+  max-width: 100%;
+}
+
+
+ATÉ AGORA TEMOS:
+
+body {
+  font: 1.2em/1.2 Helvetica, aria, sans-serif;
+}
+
+h1 {
+  font-size: 1.8em;
+  margin: .9em 0 0 0;
+}
+
+h2 {
+  
+}
+
+img {
+  max-width: 100%;
+}
+
+4)
+
+body {
+  font: 1.2em/1.2 Helvetica, aria, sans-serif;
+  margin: 0 3%;
+}
+
+ 5 - Como estamos criando uma página com o layout flexível, precisamos definir um tamanho minimo para 
+ organizar o conteúdo da página de forma que fique bem definida em dispositivos com telas menores. 
+ Para isso, precisamos demarcar o ponto em que o conteúdo ativará a responsividade. 
+ Escolhemos como primeiro breakpoint o tamanho de tela de 794px.
+ 6 - Agora, vamos aplicar as regras responsáveis por tornar nossa página responsiva a partir dos 794px.
+
+    Os estilos adicionados aos elementos dentro do @media terão efeito apenas quando o 
+    tamanho da tela for igual ou maior que 794px.
+
+    
+@media screen and (min-width: 794px) {
+  body {
+    background: rgba(0,0,255,.2);
+    margin: 25px 6%;
+  }
+
+  figure {
+    width: 45%;
+    margin-right: 4.5%;
+  }
+}
+
+7 - Vamos também criar um breakpoint para telas maiores, o tamanho escolhido será 1020px.
+8 - Agora, vamos aplicar as regras responsaveis por tornar nossa página responsiva apartir dos 1020px.
+
+
+@media screen and (min-width: 1020px) {
+  body {
+    background: rgba(0,255,0,.2);
+    margin: 25px 10%;
+    max-width: 1130px;
+  }
+
+  figure {
+    width: 30%;
+    margin-right: 2.5%;
+  }
+}
 */
