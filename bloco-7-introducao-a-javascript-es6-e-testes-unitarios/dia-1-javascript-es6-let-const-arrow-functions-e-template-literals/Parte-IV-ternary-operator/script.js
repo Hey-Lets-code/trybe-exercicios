@@ -47,6 +47,7 @@ const checkIfElse = (age) => {
   // torna o seu código difícil de ler.
 
   const nome = "Gus";
+  console.log(nome);
 const modulos = [1];
 const empresa = {
   nome: "Trybe",
