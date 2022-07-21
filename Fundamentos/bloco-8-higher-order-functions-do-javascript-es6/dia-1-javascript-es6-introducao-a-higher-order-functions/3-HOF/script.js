@@ -69,7 +69,9 @@ função para que imprima no console o resultado da execução das funções
 que você criou nos exemplos anteriores; */
 const doingThings = (frase) => frase();
 
+console.log(doingThings(fraseAcordar));
 console.log(doingThings(fraseCafe));
+console.log(doingThings(fraseDormir));
 
 
   
