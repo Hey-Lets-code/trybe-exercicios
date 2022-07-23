@@ -24,18 +24,25 @@
 
 //   console.log(newEmployees);
 
-  const employeeGenerator = (fullName) => {
-    const email = fullName.toLowerCase().split(' ').join('_');
-    return { fullName, email: `${email}@trybe.com` };
-  };
-  
-  const newEmployees = (callback) => {
+const pessoaContratada = (nomeCompleto) => {
+  return {
+    nomeCompleto, // replace(' ', (_))
+    email: `${nomeCompleto.split(',').join('_').toLowerCase()}@trybe.com` // ${Pense nesse espaço como uma função}
+  } // o split transforma em um array - excluindo o que foi passado como parâmetro
+  // enquanto o join pega o array e transforma em string concatenando com o que foi passado como parametro
+}
+console.log(pessoaContratada('Lízia Towata'));
+
+const newEmployees = (callback) => {
     const employees = {
-      id1: callback('Pedro Guerra'),
-      id2: callback('Luiza Drumond'),
-      id3: callback('Carla Paiva'),
-    };
+      id1: callback('Letícia,Augusta'), // esse callback é uma função e tá recebendo um parametro
+      // Nome: Pedro Guerra -> Chame sua função passando o nome Pedro Guerra como parâmetro, substituindo as aspas
+      id2: callback('João,Matheus'), 
+      // Nome: Luiza Drumond -> Chame sua função passando o nome Luiza Drumond como parâmetro, substituindo as aspas
+      id3: callback('Lízia,Towata'), 
+      // Nome: Carla Paiva -> Chame sua função passando o nome Carla Paiva como parâmetro, substituindo as aspas
+    }
     return employees;
-  };
-  
-  console.log(newEmployees(employeeGenerator));
+  }
+
+  console.log(newEmployees(pessoaContratada));
