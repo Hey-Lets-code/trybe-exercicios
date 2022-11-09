@@ -1,0 +1,9 @@
+[submodule "Fundamentos/Bloco-3-HTML-CSS"]
+	path = Fundamentos/Bloco-3-HTML-CSS
+	url = git@github.com:Hey-Lets-code/trybe-exercicios.git
+[submodule "Fundamentos/Bloco-4-Introdução_a_Javascript_e_Lógica_de_Programação"]
+	path = Fundamentos/Bloco-4-Introdução_a_Javascript_e_Lógica_de_Programação
+	url = git@github.com:Hey-Lets-code/trybe-exercicios.git
+[submodule "Fundamentos/bloco-5-dom-seletores-e-web-storage"]
+	path = Fundamentos/bloco-5-dom-seletores-e-web-storage
+	url = git@github.com:Hey-Lets-code/trybe-exercicios.git
